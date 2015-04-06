@@ -207,7 +207,6 @@ $LNG['sys_destruc_echec']       		   	= 'Earthquakes shake the planet. But somet
 $LNG['sys_destruc_reussi']      		   	= 'The beams of the death stars reach the moon and tear it to pieces. <br>The complete moon was destroyed.';
 $LNG['sys_destruc_null']        		   	= 'The death stars can not build up their full performance and implode.<br> The moon is not destroyed.';
 
-
 $LNG['fcp_colony']							= 'Colony';
 $LNG['fl_simulate']							= 'Simulate';
 

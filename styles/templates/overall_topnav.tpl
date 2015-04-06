@@ -31,7 +31,7 @@
         	<li class="deuterio">
                 <a style="cursor:help" class="tooltip" name="<h3>{$Deuterium}</h3><hr />{$Deuterium}: {pretty_number($deuterium)}&nbsp;&nbsp;&nbsp; <br /> {if $settings_tnstor}{$almacenes}: {$deuterium_max}{else}{$almacenes}: {$alt_deuterium_max}{/if}"><img src="styles/theme/{$Raza_skin}/images/deuterio.jpg" /></a>
                 <span class="valor">
-						<span id="current_deuterium"><b onclick="test();">{$deuterios}</b></span>
+						<span id="current_deuterium"><b>{$deuterios}</b></span>
                	</span>
             </li>
 			<li class="norio">

@@ -213,7 +213,7 @@ function ShowResourcesPage()
 	} else {
 	$porcentaje_metal = 0;
 	}
-	$metal_total		            = $PLANET['metal_perhour'] + $CONF['metal_basic_income'] * $CONF['resource_multiplier'] + $porcentaje_metal;
+	$metal_total		            = $PLANET['metal_perhour'] + $CONF['metal_basic_income'] * $CONF['resource_multiplier'];// + $porcentaje_metal;
 	
 	if($USER['geologe'] >= 1) {
 	$cristal_produccion =  floor(eval($ProdGrid[2]['formule']['crystal'])   * (0.01 * $post_porcent) * ($CONF['resource_multiplier']));
@@ -221,7 +221,7 @@ function ShowResourcesPage()
 	} else {
 	$porcentaje_crista = 0;
 	}
-	$crystal_total			        = $PLANET['crystal_perhour'] + $CONF['crystal_basic_income'] * $CONF['resource_multiplier'] + $porcentaje_cristal ;
+	$crystal_total			        = $PLANET['crystal_perhour'] + $CONF['crystal_basic_income'] * $CONF['resource_multiplier'];// + $porcentaje_cristal ;
 	
 	if($USER['geologe'] >= 1) {
 	$deuterio_produccion = floor(eval($ProdGrid[3]['formule']['deuterium']) * (0.01 * $post_porcent) * ($CONF['resource_multiplier']));
@@ -229,7 +229,7 @@ function ShowResourcesPage()
 	} else {
 	$porcentaje_deuterio = 0;
 	}
-	$deuterium_total  		        = $PLANET['deuterium_perhour'] + $CONF['deuterium_basic_income'] * $CONF['resource_multiplier'] + $porcentaje_deuterio;
+	$deuterium_total  		        = $PLANET['deuterium_perhour'] + $CONF['deuterium_basic_income'] * $CONF['resource_multiplier'];// + $porcentaje_deuterio;
 	
 	if($USER['geologe'] >= 1) {
 	$norio_produccion =  floor(eval($ProdGrid[7]['formule']['norio'])   * (0.01 * $post_porcent) * ($CONF['resource_multiplier']));
@@ -237,7 +237,7 @@ function ShowResourcesPage()
 	} else {
 	$porcentaje_norio = 0;
 	}
-	$norio_total		            = $PLANET['norio_perhour'] + $CONF['norio_basic_income'] * $CONF['resource_multiplier'] + $porcentaje_norio;	
+	$norio_total		            = $PLANET['norio_perhour'] + $CONF['norio_basic_income'] * $CONF['resource_multiplier'];// + $porcentaje_norio;	
 	
 	$energy_total					= $PLANET['energy_max'] + $CONF['energy_basic_income'] * $CONF['resource_multiplier'] - abs($PLANET['energy_used']);
 	
@@ -324,8 +324,8 @@ function ShowResourcesPage()
 		'weekly_crystal'        				=> colorNumber(pretty_number(floor($crystal_total   * 24 * 7))),
 		'daily_deuterium'       				=> colorNumber(pretty_number(floor($deuterium_total * 24))),
 		'weekly_deuterium'      				=> colorNumber(pretty_number(floor($deuterium_total * 24 * 7))),
-		'daily_norio'         				    => colorNumber(pretty_number(floor($norio_total   * 24))),
-		'weekly_norio'        				    => colorNumber(pretty_number(floor($norio_total   * 24 * 7))),
+		'daily_norio'         				    => colorNumber(pretty_number(floor($norio_total   	* 24))),
+		'weekly_norio'        				    => colorNumber(pretty_number(floor($norio_total   	* 24 * 7))),
 		'Metal'									=> $LNG['Metal'], 
 		'Crystal'								=> $LNG['Crystal'], 
 		'Deuterium'								=> $LNG['Deuterium'], 
